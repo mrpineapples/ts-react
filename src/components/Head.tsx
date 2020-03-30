@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
 type Props = {
-    title: string,
-    isActive: boolean
-}
+    title: string;
+    isActive: boolean;
+};
 
 export const Head = ({ title, isActive }: Props) => {
     return (
