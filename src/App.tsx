@@ -13,7 +13,9 @@ function App() {
                     e.preventDefault();
                     console.log(e);
                 }}
-            />
+            >
+                Hello FC
+            </Button>
             <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo" />
                 <p>

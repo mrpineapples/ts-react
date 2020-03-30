@@ -58,8 +58,9 @@
         "import/prefer-default-export": "off",
         "import/no-named-as-default": "off",
         "import/no-named-as-default-member": "off",
-        "react/prefer-stateless-function": "off",
         "react/jsx-boolean-value": "off",
+        "react/prefer-stateless-function": "off",
+        "react/prop-types": "off",
         "@typescript-eslint/explicit-function-return-type": "off"
     },
     "plugins": ["prettier"]
