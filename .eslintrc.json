@@ -15,12 +15,7 @@
     "settings": {
         "import/resolver": {
             "node": {
-                "extensions": [
-                    ".js",
-                    ".jsx",
-                    ".ts",
-                    ".tsx"
-                ]
+                "extensions": [".js", ".jsx", ".ts", ".tsx"]
             }
         }
     },
@@ -28,11 +23,7 @@
         "react/jsx-filename-extension": [
             1,
             {
-                "extensions": [
-                    ".js",
-                    ".jsx",
-                    ".tsx"
-                ]
+                "extensions": [".js", ".jsx", ".tsx"]
             }
         ],
         "prettier/prettier": [
@@ -68,9 +59,8 @@
         "import/no-named-as-default": "off",
         "import/no-named-as-default-member": "off",
         "react/prefer-stateless-function": "off",
-        "react/jsx-boolean-value": "off"
+        "react/jsx-boolean-value": "off",
+        "@typescript-eslint/explicit-function-return-type": "off"
     },
-    "plugins": [
-        "prettier"
-    ]
+    "plugins": ["prettier"]
 }
