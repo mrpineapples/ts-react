@@ -10,9 +10,20 @@
         "prettier/react",
         "plugin:@typescript-eslint/recommended",
         "prettier/@typescript-eslint"
-
     ],
     "parser": "@typescript-eslint/parser",
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "extensions": [
+                    ".js",
+                    ".jsx",
+                    ".ts",
+                    ".tsx"
+                ]
+            }
+        }
+    },
     "rules": {
         "react/jsx-filename-extension": [
             1,
@@ -20,7 +31,7 @@
                 "extensions": [
                     ".js",
                     ".jsx",
-                    ".tsx"                
+                    ".tsx"
                 ]
             }
         ],
@@ -43,10 +54,21 @@
                 "allowForLoopAfterthoughts": true
             }
         ],
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "js": "never",
+                "jsx": "never",
+                "ts": "never",
+                "tsx": "never"
+            }
+        ],
         "import/prefer-default-export": "off",
         "import/no-named-as-default": "off",
         "import/no-named-as-default-member": "off",
-        "react/prefer-stateless-function": "off"
+        "react/prefer-stateless-function": "off",
+        "react/jsx-boolean-value": "off"
     },
     "plugins": [
         "prettier"
