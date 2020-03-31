@@ -1,6 +1,11 @@
 import React, { useRef, useContext } from "react";
+import styled from "styled-components";
 import { useClickOutside } from "../hooks/useClickOutside";
 import { GlobalContext } from "../GlobalContext";
+
+const Wrapper = styled.div`
+    background: red;
+`;
 
 export const ReducerButtons = () => {
     const ref = useRef<HTMLDivElement>(null!);
@@ -11,7 +16,7 @@ export const ReducerButtons = () => {
     });
 
     return (
-        <div ref={ref}>
+        <Wrapper ref={ref}>
             {rValue && <h1>Visible</h1>}
             <button type="button" onClick={turnOn}>
                 Action One
@@ -19,6 +24,6 @@ export const ReducerButtons = () => {
             <button type="button" onClick={turnOff}>
                 Action Two
             </button>
-        </div>
+        </Wrapper>
     );
 };
