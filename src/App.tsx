@@ -3,13 +3,13 @@ import { Head } from "./components/Head";
 import { Button } from "./components/Button";
 import { Input } from "./components/Input";
 import { ReducerButtons } from "./components/ReducerButtons";
-import { GlobalContext, initialValues } from "./GlobalContext";
+import { GlobalProvider } from "./GlobalContext";
 import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
     return (
-        <GlobalContext.Provider value={initialValues}>
+        <GlobalProvider>
             <div className="App">
                 <Head title="Hello" />
                 <Button
@@ -37,7 +37,7 @@ function App() {
                     </a>
                 </header>
             </div>
-        </GlobalContext.Provider>
+        </GlobalProvider>
     );
 }
 

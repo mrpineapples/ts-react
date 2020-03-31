@@ -1,42 +1,10 @@
-import React, { useReducer, useRef, useContext } from "react";
+import React, { useRef, useContext } from "react";
 import { useClickOutside } from "../hooks/useClickOutside";
 import { GlobalContext } from "../GlobalContext";
 
-const initialState = { rValue: true };
-
-type State = {
-    rValue: boolean;
-};
-
-// Making an action be two completely different types
-// type Action = { type: "one" } | { type: "two" };
-
-// Shorthand way of making a long union
-// type Action =
-//     | { type: "one" }
-//     | { type: "two" }
-//     | { type: "three" }
-//     | { type: "four" };
-
-type Action = {
-    type: "one" | "two";
-};
-
-const reducer = (state: State, action: Action) => {
-    switch (action.type) {
-        case "one":
-            return { rValue: true };
-        case "two":
-            return { rValue: false };
-        default:
-            return state;
-    }
-};
-
 export const ReducerButtons = () => {
-    const [state, dispatch] = useReducer(reducer, initialState);
     const ref = useRef<HTMLDivElement>(null!);
-    const { rValue } = useContext(GlobalContext);
+    const { rValue, turnOn, turnOff } = useContext(GlobalContext);
 
     useClickOutside(ref, () => {
         console.log("clicked outside");
@@ -45,10 +13,10 @@ export const ReducerButtons = () => {
     return (
         <div ref={ref}>
             {rValue && <h1>Visible</h1>}
-            <button type="button" onClick={() => dispatch({ type: "one" })}>
+            <button type="button" onClick={turnOn}>
                 Action One
             </button>
-            <button type="button" onClick={() => dispatch({ type: "two" })}>
+            <button type="button" onClick={turnOff}>
                 Action Two
             </button>
         </div>
