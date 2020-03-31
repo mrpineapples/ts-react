@@ -3,6 +3,7 @@ import { Head } from "./components/Head";
 import { Button } from "./components/Button";
 import { Input } from "./components/Input";
 import { ReducerButtons } from "./components/ReducerButtons";
+import { BigClass } from "./components/BigClass";
 import { GlobalProvider } from "./GlobalContext";
 import logo from "./logo.svg";
 import "./App.css";
@@ -12,6 +13,7 @@ function App() {
         <GlobalProvider>
             <div className="App">
                 <Head title="Hello" />
+                <BigClass title="Class Component" />
                 <Button
                     onClick={(e) => {
                         e.preventDefault();
